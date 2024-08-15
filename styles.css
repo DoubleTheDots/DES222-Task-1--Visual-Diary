@@ -15,24 +15,23 @@ body {
 
 .image-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px 0;
 }
 
-.image-row img {
+.image-text-container {
     width: 23%;
+    text-align: center;
+}
+
+.image-text-container img {
+    width: 100%;
     height: auto;
 }
 
-.text-row {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.text-row p {
-    width: 23%;
+.image-text-container p {
+    margin-top: 10px;
 }
 
 .footer {
@@ -43,4 +42,18 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-text-container {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-text-container {
+        width: 100%;
+    }
 }
